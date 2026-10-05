@@ -1,0 +1,23 @@
+[package]
+name = "local-epub-reader"
+version = "0.1.0"
+description = "A local EPUB reader"
+authors = ["Local EPUB Reader"]
+edition = "2021"
+
+[lib]
+name = "local_epub_reader_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+serde = { version = "1", features = ["derive"] }
+
+[target.'cfg(any(target_os = "macos", windows, target_os = "linux"))'.dependencies]
+tauri-plugin-single-instance = "2"
+
+[features]
+custom-protocol = ["tauri/custom-protocol"]

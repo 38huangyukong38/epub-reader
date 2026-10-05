@@ -1,0 +1,37 @@
+# Dependencies, downloaded toolchains and local build configuration
+node_modules/
+tools/
+.cargo/
+.npm-cache/
+.agents/
+.codex/
+.publish/
+.env
+.env.*
+!.env.example
+
+# Generated builds and test output; binaries are published in GitHub Releases
+dist/
+release/
+test-results/
+playwright-report/
+coverage/
+*.tsbuildinfo
+*.log
+src-tauri/target/
+src-tauri/tools/
+src-tauri/gen/schemas/
+src-tauri/gen/android/.gradle/
+src-tauri/gen/android/**/build/
+src-tauri/gen/android/app/src/main/jniLibs/
+src-tauri/gen/android/local.properties
+
+# Local signing material and editor settings
+*.jks
+*.keystore
+key.properties
+keystore.properties
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

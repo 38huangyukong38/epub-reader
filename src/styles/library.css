@@ -1,0 +1,45 @@
+.library-page {
+  max-width: 1240px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 44px 32px 72px;
+}
+
+.library-page__header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #d7dce3;
+}
+
+.library-page__header h1,
+.library-page__empty h2 {
+  margin: 0;
+  color: #172033;
+}
+
+.library-page__header h1 { font-size: 30px; }
+.library-page__eyebrow { margin: 0 0 6px; color: #677385; font-size: 14px; }
+.import-button { border: 0; border-radius: 6px; padding: 10px 16px; color: #fff; background: #176b87; cursor: pointer; font: inherit; }
+.import-button:hover { background: #10576f; }
+.import-button__input { display: none; }
+.library-page__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 28px 20px; padding-top: 32px; }
+.library-page { min-height: 100vh; }.book-card[draggable="true"] { cursor: grab; }.book-card[draggable="true"]:active { cursor: grabbing; opacity: .72; }
+.library-page__empty, .library-page__status { padding: 92px 0; text-align: center; color: #596579; }
+.library-page__empty p { margin: 10px 0 22px; }
+.library-page__error { margin: 20px 0 0; padding: 12px; border-left: 3px solid #c2410c; color: #9a3412; background: #fff7ed; }
+.book-card { position: relative; min-width: 0; }
+.book-card__open { display: grid; width: 100%; border: 0; padding: 0; color: inherit; background: transparent; text-align: left; cursor: pointer; }
+.book-card__cover { display: grid; width: 100%; aspect-ratio: 0.72; place-items: center; border-radius: 5px; object-fit: cover; box-shadow: 0 8px 18px rgb(30 41 59 / 18%); }
+.book-card__cover--fallback { color: #f8fafc; background: #326273; font-size: 42px; font-family: Georgia, serif; }
+.book-card__title { overflow: hidden; margin-top: 12px; color: #1e293b; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; }
+.book-card__creator, .book-card__progress { overflow: hidden; margin-top: 4px; color: #64748b; font-size: 14px; text-overflow: ellipsis; white-space: nowrap; }
+.book-card__progress { color: #287047; }
+.book-card__remove { margin-top: 10px; border: 0; padding: 3px 0; color: #9a3412; background: transparent; cursor: pointer; font: inherit; font-size: 13px; }
+
+@media (max-width: 700px) {
+  .library-page { min-width: 0; padding: 24px 18px 48px; }
+  .library-page__header { align-items: start; flex-direction: column; }
+}
